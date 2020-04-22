@@ -48,5 +48,10 @@ public class PokedexController {
 	public void delete(@PathVariable("id") Long id) throws Exception{
 		pokemonService.deleteSingle(id);
 	}
+	
+	@GetMapping("/pokedex/find/{name}")
+	public Optional<List<Pokemon>> findPokemon(@PathVariable String name){
+		return pokemonService.getPokemonByName(name);
+	}
 
 }

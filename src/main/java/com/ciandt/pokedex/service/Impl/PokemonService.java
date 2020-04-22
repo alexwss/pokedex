@@ -49,4 +49,9 @@ public class PokemonService implements IPokemonService{
 		pokemonRepository.deleteById(id);
 	}
 
+	@Override
+	public Optional<List<Pokemon>> getPokemonByName(String name) {
+		return pokemonRepository.findByNameIgnoreCaseContaining(name);
+	}
+
 }

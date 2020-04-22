@@ -16,6 +16,8 @@ public interface IPokemonService {
 	public Optional<Pokemon> getSingle(Long id) throws Exception;
 	
 	public void deleteSingle(Long id) throws Exception;
+	
+	public Optional<List<Pokemon>> getPokemonByName(String name);
 		
 }
  
