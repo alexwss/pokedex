@@ -6,6 +6,7 @@ pipeline {
         stage('build') {
         
             steps {
+                echo 'Hello world!'
                 sh 'mvn clean install -DskipTests'
             }
             
