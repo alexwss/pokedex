@@ -21,4 +21,9 @@ pipeline {
         }        
         
     }
+    post {
+        aways {
+            archiveArtifacts artifacts: 'target/*.jar', onlyIfSuccessful: true
+        }
+    }
 }
