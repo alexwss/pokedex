@@ -22,7 +22,7 @@ pipeline {
         
     }
     post {
-        aways {
+        always {
             archiveArtifacts artifacts: 'target/*.jar', onlyIfSuccessful: true
         }
     }
