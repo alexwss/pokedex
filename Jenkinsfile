@@ -1,7 +1,9 @@
 pipeline {
-
     agent any
-
+    tools {
+        maven 'Maven'
+        jdk 'JDK_8'
+    }
     stages {
 
         stage ('Build') {
@@ -10,6 +12,5 @@ pipeline {
                 sh("mvn clean install") 
             }
         }
-        
     }
 }
