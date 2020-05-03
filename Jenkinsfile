@@ -7,10 +7,15 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
+<<<<<<< HEAD
                 sh '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 '''
+=======
+                echo 'Hello world!'
+                sh 'mvn clean install -DskipTests'
+>>>>>>> 90593b08b0e4724178ba90d1c2698202bf494557
             }
         }
 
